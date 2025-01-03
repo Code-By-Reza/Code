@@ -1,2 +1,2 @@
-# Code
+# Code-With-JS
 Learning programming
