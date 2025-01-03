@@ -53,7 +53,8 @@ console.log
 (
     "Die Summe ist: " + 
    (
-    Number(prompt("Bitte Zahl 1 eingeben ")) +
-    Number(prompt("Bitte Zahl 2 eingeben "))
+    Number(prompt("Bitte Zahl 1 eingeben: ")) +
+    Number(prompt("Bitte Zahl 2 eingeben: "))
    ) 
 );
+
