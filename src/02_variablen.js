@@ -13,9 +13,9 @@
 
 // let firstName; // Deklaration (Definition)
 // console.log(firstName); // Ausgabe
-// firstName = "Max"; // Wertzuweisung | assignment
+// firstName = "Reza"; // Wertzuweisung | assignment
 // console.log(firstName); // Ausgabe
-// let familyName = "Mütze"; // Deklaration + Wertzuweisung
+// let familyName = "Kouh Payeh"; // Deklaration + Wertzuweisung
 // console.log("Hi, ich bin " + firstName + " " + familyName + "!");
 
 /*  
@@ -27,7 +27,7 @@
 // console.log("Datentyp: " + typeof test);
 // console.log("Inhalt: " + test);
 // console.log("--------------------");
-// test = "hello"; // string
+// test = "Hello"; // string
 // console.log("Datentyp: " + typeof test);
 // console.log("Inhalt: " + test);
 // console.log("--------------------");
@@ -44,11 +44,12 @@
 
 // Variable
 let test;  // Variable : Deklaration
-test = "hi"; // Wertzuweisung (Initialisierung)
-test = "hello 🙌"; // Überschreiben
+test = "Hi"; // Wertzuweisung (Initialisierung)
+test = "Hello 🙌"; // Überschreiben
 console.log("Inhalt: " + test); // Ausgabe
 
 // Konstante
 const test2 = "Hi! 🙌"; // Deklaration + Wertzuweisung gemeinsam !
 // test2 = 2; // Laufzeitfehler !!
 console.log("Inhalt: " + test2); // Ausgabe
+
