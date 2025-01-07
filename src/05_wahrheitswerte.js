@@ -10,12 +10,12 @@ let date = new Date();
 let year = date.getFullYear(); // "data" wurde zu "date" korrigiert
 // let year = 2025; // Alternativ kann das Jahr manuell angegeben werden
 ageReza = year - birthYearReza;
-ageMark = year - birthYearMark; // Alter von Mark korrekt berechnet
+ageMark = year - birthYearMark; // Alter von Mark 
 
 // Ausgabe
 console.log("ageReza: " + ageReza);
 console.log("ageMark: " + ageMark);
-// console.log("Datm. " + date); // Rechtschreibfehler in Kommentar: "Datm" könnte "Datum" sein
+// console.log("Datum. " + date); 
 
 // Tests
 
@@ -24,4 +24,4 @@ isRezaOlder = (ageReza > ageMark); // Vergleich zwischen ageReza und ageMark
 let isRezaEqual = (ageReza == ageMark); // Variable "isRezaEqual" deklariert
 
 console.log("Is Reza older: " + isRezaOlder);
-console.log("Is Reza equal: " + isRezaEqual); // Ausgabe korrigiert, richtige Variable genutzt
+console.log("Is Reza equal: " + isRezaEqual); // Ausgabe 
