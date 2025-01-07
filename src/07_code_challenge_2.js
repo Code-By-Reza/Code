@@ -27,3 +27,23 @@ let getränk =
   alter >= 18 ? "Wein" : null;
 
 console.log(getränk ? `${name} trinkt ${getränk}.` : "Bitte geben Sie ein gültiges Alter ein.");
+
+
+
+// Ternary operator 1
+
+ //let age = 10;
+ //let status = age >= 18? "Erwachsen" : "Nicht erwachsen";
+ //console.log(status);
+ 
+
+// Ternary operator 2
+ let age = 10;
+ let category = age < 13
+ ?"Kind"
+ : age < 18
+ ? "Jugendlicher"
+ : "Erwachsener";
+
+ console.log(`Kategorie: ${category}`);
+ 
