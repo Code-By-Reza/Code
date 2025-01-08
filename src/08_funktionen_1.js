@@ -43,6 +43,21 @@ test();
 ausgabeNamen_3("Reza");
 function ausgabeNamen_3(firstName) { // Parameter
 
-    console.log("Hallo, " + firstName + "!");
+    console.log("Hallo, " + firstName +  "\n");
+    
+}
+
+/***** Funktionen 02c *****/
+// 2c. Mehrere Parameter / Argumente
+ausgabeNameParamas("Reza", "Kouhpayeh\n");
+
+const prompt = require('prompt-sync')({sigint:true});
+ausgabeNameParamas(prompt("Vorname? :"), prompt("Name? :")); // piping
+
+
+
+
+function ausgabeNameParamas(firstName,secondName) {
+    console.log("Hallo 🙌, " + firstName + " " + secondName );
     
 }
