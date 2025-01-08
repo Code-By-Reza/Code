@@ -91,20 +91,29 @@ test();
 
 // 1. Funktionalität: string composing
 
-output(getString("Reza","Kouhpayeh"));
+//output(getString("Reza","Kouhpayeh"));
 
-function getString(firstName, secondName) {
-    const GAP = " ";
-    let outputStr = "Hallo,"+ GAP + firstName + GAP + secondName + "!"
+//function getString(firstName, secondName) {
+    //const GAP = " ";
+    //let outputStr = "Hallo,"+ GAP + firstName + GAP + secondName + "!"
   
-    return outputStr; // return schickt die Daten an den cell........
+    //return outputStr; // return schickt die Daten an den cell........
 
-}
+//}
 
 
 // 1. Funktionalität: string output
 
-function output(outputData) {
-    console.log(outputData)
+//function output(outputData) {
+    //console.log(outputData);
+//}
+
+// Funktionen mit Rückgabewerten
+
+function addiere(a,b) {
+    return a + b;
     
 }
+
+let summe = addiere(10, 5);
+console.log("Die Summe ist:" + summe);
