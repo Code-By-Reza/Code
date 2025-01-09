@@ -11,19 +11,44 @@
 
  //const ERROR_STR_DIV = "Error: Division by zero!";
 
+ const prompt = require('prompt-sync')({ sigint: true }); // Bibliothek zum Abrufen von Benutzereingaben
 
-//  const prompt = require('prompt-sync')({sigint: true});
+ startApp(); // Starten der Anwendung
+ 
+ function startApp() {
+     // Abrufen des Operators und Berechnung
+     const result = calculate(5, 1, getOp()); // Berechnung 
+     output(result); // Ausgabe des Ergebnisses
+ }
+ 
+ function getOp() {
+     
+     const operator = prompt("OP?: "); // Operator eingeben (z. B. +, -, *, /)
+     return operator; 
+ }
+ 
+ function calculate(num1, num2, op) {
+     
+     switch (op) {
+         case '+':
+             return num1 + num2; // Addition
+         case '-':
+             return num1 - num2; // Subtraktion
+         case '*':
+             return num1 * num2; // Multiplikation
+         case '/':
+             if (num2 === 0) return "Fehler: Division durch Null"; 
+             return num1 / num2; // Division
+         default:
+             return "Ungültiger Operator"; 
+     }
+ }
+ 
+ function output(result) {
+     console.log("Ergebnis:", result); 
+ }
+ 
 
-//  startApp()
-//  function startApp() {
-//     output(calculate(5, 1, getOp()));
-    
-//  }
-
-//  function getOp() {
-//     return prompt("OP?: ");
-    
-//  }
 
 
  // module: calculator | tests:
@@ -35,53 +60,6 @@
 // output(calculator(3,2,"/"));
 // output(calculator(3,0,"/"));
 // output(calculator(3,2,"#?!"))
-
-// Funktion calculate 
-
-function calculate(num1, num2, op) {
-    // Konvertiere die Eingaben in Zahlen
-    num1 = parseFloat(num1); // Wandelt die erste Eingabe in eine Zahl um
-    num2 = parseFloat(num2); // Wandelt die zweite Eingabe in eine Zahl um
-
-
-    // Überprüfe die Operation und führe die Berechnung durch
-    switch (op) {
-        case '+': 
-            return num1 + num2; // Addition
-        case '-': 
-            return num1 - num2; // Subtraktion
-        case '*': 
-            return num1 * num2; // Multiplikation
-        case '/': 
-            if (num2 === 0) { 
-                return "Fehler: Division durch Null"; // Fehler, wenn der Divisor 0 ist
-            }
-            return num1 / num2; // Division
-        case '%': 
-            if (num2 === 0) { 
-                return "Fehler: Division durch Null"; // Fehler, wenn der Divisor 0 ist
-            }
-            return num1 % num2; // Modulo (Rest der Division)
-        case '^': 
-            return Math.pow(num1, num2); // Exponentiation (erste Zahl hoch zweite Zahl)
-        case '√': 
-            if (num1 < 0) { 
-                return "Fehler: Negative Wurzel"; // Fehler bei einer negativen Zahl
-            }
-            return Math.sqrt(num1); // Quadratwurzel der ersten Zahl
-        default: 
-            return "Ungültiger Operator"; // Fehler bei einem ungültigen Operator
-    }
-}
-
-// Beispiele für Berechnungen:
-console.log("Addition:", calculate(10, 5, '+')); // 10 + 5 = 15
-console.log("Subtraktion:", calculate(10, 5, '-')); // 10 - 5 = 5
-console.log("Multiplikation:", calculate(10, 5, '*')); // 10 * 5 = 50
-console.log("Division:", calculate(10, 0, '/')); // 10 / 5 = 2
-console.log("Modulo:", calculate(10, 3, '%')); // 10 % 3 = 1
-console.log("Exponentiation:", calculate(2, 3, '^')); // 2^3 = 8
-console.log("Quadratwurzel:", calculate(16, 0, '√')); // √16 = 4
 
 
 
