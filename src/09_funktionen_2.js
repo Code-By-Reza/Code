@@ -11,13 +11,13 @@
 
 // // module: division a / b | test:
 // const ERROR_STR_DIV = "Error: Division by zero!";
-output(divide(3,2));
-output(divide(3,-2));
-output(divide(3,0));
-output(divide(0,0));
+// output(divide(3,2));
+// output(divide(3,-2));
+// output(divide(3,0));
+// output(divide(0,0));
 // function divide(a , b) {
    
-//     if(b == 0){ // Ausnahme
+//     if(b == 0){  // Ausnahme
 //      return ERROR_STR_DIV ;
 // }
 //  return a / b;
@@ -26,7 +26,9 @@ output(divide(0,0));
 
 
 // module: multiplikation a * b | test:
-function divide(a , b) {
+output(multiply(3,2));
+output(multiply(3,0));
+function multiply(a , b) {
     return a * b;
     
 }
