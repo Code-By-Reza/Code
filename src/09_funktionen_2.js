@@ -11,42 +11,48 @@
 
  //const ERROR_STR_DIV = "Error: Division by zero!";
 
- const prompt = require('prompt-sync')({ sigint: true }); // Bibliothek zum Abrufen von Benutzereingaben
 
- startApp(); // Starten der Anwendung
- 
- function startApp() {
-     // Abrufen des Operators und Berechnung
-     const result = calculate(5, 1, getOp()); // Berechnung 
-     output(result); // Ausgabe des Ergebnisses
- }
- 
- function getOp() {
-     
-     const operator = prompt("OP?: "); // Operator eingeben (z. B. +, -, *, /)
-     return operator; 
- }
- 
- function calculate(num1, num2, op) {
-     
-     switch (op) {
-         case '+':
-             return num1 + num2; // Addition
-         case '-':
-             return num1 - num2; // Subtraktion
-         case '*':
-             return num1 * num2; // Multiplikation
-         case '/':
-             if (num2 === 0) return "Fehler: Division durch Null"; 
-             return num1 / num2; // Division
-         default:
-             return "Ungültiger Operator"; 
-     }
- }
- 
- function output(result) {
-     console.log("Ergebnis:", result); 
- }
+  
+ // Calculate
+
+const prompt = require('prompt-sync')({ sigint: true });// Bibliothek zum Abrufen von Benutzereingaben
+
+startApp(); //Starten der Anwendung
+function startApp() {
+    const result = calculate(25, 10, getOp());
+    output(result);
+}
+
+function getOp() {
+    const operator = prompt("Operator eingeben: (+, -, *, /, %) ?  "); // Operator eingeben (z.B. +, -, *, /,%)
+    return operator;
+
+}
+
+function calculate(num1, num2, op) {
+    switch (op) {
+        case '+':
+            return num1 + num2; // Addition
+        case '-':
+            return num1 - num2; // Subtraktion
+        case '*':
+            return num1 * num2; // Multiplikation
+        case '%':
+            return num1 % num2; // Rest
+        case '/':
+            if (num2 === 0) return "Fehler: Division duech Null";
+            return num1 / num2; // Division
+
+        default:
+            return "Ungültiger Operator";
+
+
+    }
+}
+
+function output(result){
+    console.log("Ergebnis: ", result);
+}  // Ende der Anwendung
  
 
 
@@ -101,6 +107,7 @@
 
 // module: output | test:
 
-function output(outputData) {
-    console.log(outputData);
-}
+// function output(outputData) {
+//     console.log(outputData);
+// }
+ 
